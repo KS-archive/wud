@@ -1,0 +1,285 @@
+:root {
+  --primary: rgb(24, 144, 255);
+  --primary-hover: rgba(24, 144, 255, 0.1);
+  --primary-active: rgba(24, 144, 255, 0.3);
+  --background: rgb(245, 245, 245);
+  --text-primary: rgb(33, 33, 33);
+  --text-secondary: rgb(102, 102, 102);
+  --white: rgb(255, 255, 255);
+  --white-hover: rgba(255, 255, 255, 0.1);
+  --white-active: rgba(255, 255, 255, 0.3);
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+b {
+  font-weight: 700;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./pattern.png");
+  background-color: var(--background);
+}
+
+.card {
+  position: relative;
+  top: -40px;
+  width: 1080px;
+  border-radius: 16px;
+  background-color: var(--white);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-top {
+  display: flex;
+  height: 306px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  background-color: var(--primary);
+}
+
+.image {
+  box-sizing: border-box;
+  width: 280px;
+  height: 280px;
+  border: 4px solid var(--white);
+  margin: 48px 0 0 48px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: auto;
+  height: 100%;
+  color: var(--white);
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 64px;
+}
+
+.position {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.socials {
+  display: flex;
+  margin-top: 32px;
+}
+
+.social-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  color: var(--white);
+  transition: background-color 0.3s;
+}
+
+.social-circle:hover {
+  background-color: var(--white-hover);
+}
+
+.social-circle:active {
+  background-color: var(--white-active);
+}
+
+.social-circle + .social-circle {
+  margin-left: 16px;
+}
+
+.card-bottom {
+  display: flex;
+  padding: 48px;
+}
+
+.about-me {
+  margin-right: 64px;
+}
+
+.about-me-header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--text-primary);
+}
+
+.about-me-header span {
+  color: var(--primary);
+}
+
+.about-me-content {
+  margin-top: 8px;
+  line-height: 24px;
+  color: var(--text-secondary);
+}
+
+.resume-button {
+  position: relative;
+  display: inline-block;
+  padding: 7px 15px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  margin-top: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--primary);
+  transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.resume-button:active {
+  background-color: var(--primary-active);
+}
+
+.contact {
+  margin-top: 40px;
+}
+
+.contact-row {
+  display: flex;
+  line-height: 24px;
+}
+
+.contact-row + .contact-row {
+  margin-top: 8px;
+}
+
+.contact-row b {
+  width: 80px;
+  color: var(--text-primary);
+}
+
+.contact-row span {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: calc(100% - 64px);
+  }
+}
+
+@media (max-width: 800px) {
+  .image {
+    display: none;
+  }
+
+  .about-me {
+    margin: 0;
+  }
+
+  .contact {
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .card-bottom {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    align-items: flex-start;
+  }
+
+  .card {
+    top: 0;
+    width: calc(100% - 32px);
+    margin: 16px 0;
+  }
+
+  .card-top {
+    height: 160px;
+  }
+
+  .name {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .position {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .socials {
+    margin-top: 12px;
+  }
+
+  .social-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-circle i {
+    font-size: 14px;
+  }
+
+  .card-bottom {
+    padding: 16px;
+  }
+
+  .about-me-header {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .about-me-content {
+    font-size: 14px;
+  }
+
+  .resume-button {
+    margin-top: 12px;
+  }
+
+  .contact {
+    margin-bottom: 16px;
+  }
+
+  .contact-row {
+    display: flex;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
